@@ -1,4 +1,4 @@
-var init = function (window) {}
+var init = function (window) {
     'use strict';
     var 
         draw = window.opspark.draw,
@@ -104,7 +104,7 @@ var init = function (window) {}
         game.update = update;
         
         app.addUpdateable(window.opspark.game);
-    }
+    }}
     // DO NOT REMOVE THIS CODE //////////////////////////////////////////////////////
     if((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {
