@@ -36,7 +36,7 @@ var init = function (window) {
 
 
         // TODO 7 : Use a loop to create multiple circles
-        for (var amountCirc = 0; amountCirc < 25; amountCirc++) {
+        for (var amountCirc = 0; amountCirc < 100; amountCirc++) {
             drawCircle();
         }
 
@@ -51,18 +51,20 @@ var init = function (window) {
         In each frame, for every circle, it should redraw that circle
         and check to see if it has drifted off the screen.         
         */
-        function update() {
+        function update(){
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
-          
+            physikz.updatePosition(circles[0]);
             
             // TODO 5 : Call game.checkCirclePosition() on your circles
           
             
             // TODO 8 / TODO 9 : Iterate over the array
+            
             for (var i = 0; i < circles.length; i++){
-                physikz.updatePosition(i);
-                game.checkCirclePosition(i);
+                physikz.updatePosition(circles[i]);
+                game.checkCirclePosition(circles[i]);
             }
+        }
     
         /* 
         This Function should check the position of a circle that is passed to the 
@@ -110,4 +112,4 @@ var init = function (window) {
     (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports = init;
-    }}
+    }
